@@ -3,9 +3,9 @@
 function check_capacity($capacity, $attendees=0){
     if($capacity<$attendees){
         return "This event is sold out ";
-    }else {
-        return "There are still seats on ";
     }
+
+    return "There are still seats on ";
 }
 
 $vanues = array (
@@ -15,6 +15,5 @@ $vanues = array (
 );
 
 foreach($vanues as $name => $numbers){
-    echo $name . ' - ' .
-    check_capacity($numbers[0], $numbers[1]) . '</br>';
+    echo $name . ' - ' . check_capacity($numbers[0], $numbers[1]) . '</br>';
 }
